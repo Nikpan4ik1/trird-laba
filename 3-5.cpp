@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <limits>
 
 using namespace std;
 
@@ -19,7 +18,7 @@ int main() {
         return 1;
     }
 
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.ignore(10000,'\n');
 
     cout << "Конец: ";
     cin >> kon;
@@ -33,7 +32,7 @@ int main() {
         return 1;
     }
 
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.ignore(10000,'\n');
 
     cout << "" << endl;
     srand(time(NULL));
@@ -41,14 +40,12 @@ int main() {
 
     int vvod;
 
-
-    
     bool correct = false;
     int c = 0; 
     do {
         cout << "Введите число от " << nach << " до " <<kon <<": ";
         cin >> vvod;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(10000,'\n');
 
         if (cin.fail()) {
             cout << "Ошибка ввода. Введите целое число." << endl;
